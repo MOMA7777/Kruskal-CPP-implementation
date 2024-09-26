@@ -5,8 +5,8 @@ using namespace std;
 void union_(int element, int target);
 int DetectCycle(int u, int v);
 
-vector<int> parent   (100,  0);
-vector<int> camefrom (100, -1);
+vector<int> parent   (100,  0); //for detecting cycling using disjoint set.
+vector<int> camefrom (100, -1); //for backtracking the parents of the nodes.
 
 struct Edge {
     private:
