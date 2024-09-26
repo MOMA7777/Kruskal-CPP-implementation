@@ -1,0 +1,11 @@
+KRUSKAL(G):
+  1. MST = ∅  // Initialize an empty set for the Minimum Spanning Tree
+  2. Sort all edges of G by their weights in non-decreasing order
+  3. for each vertex v in G.V:
+       MAKE-SET(v)  // Create a disjoint set for each vertex
+  4. for each edge (u, v) in the sorted list of edges:
+       if FIND-SET(u) ≠ FIND-SET(v):  // Check if u and v are in different sets
+           MST = MST ∪ {(u, v)}  // Add edge (u, v) to the MST
+           UNION(u, v)  // Merge the sets containing u and v
+  5. return MST  // MST contains the edges of the Minimum Spanning Tree
+
