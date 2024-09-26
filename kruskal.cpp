@@ -34,8 +34,7 @@ struct pair_hash {
 
 SET KrusKal(vector<Edge> G, int &numberOfVertex) {
     SET MST;
-    
-
+   
     int terminator = 0;
     for (const auto & [u, v, weight] : G) {
         if (terminator == numberOfVertex-1) break;
